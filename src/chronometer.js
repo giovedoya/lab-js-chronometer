@@ -29,14 +29,13 @@ class Chronometer {
     }
   }
   stop() {
-    clearInterval(intervalId); 
+    clearInterval(this.intervalId); 
   }
-
   reset() {
-    
+    this.currentTime = 0;
   }
-
   split() {
-    
+    const result = `${this.computeTwoDigitNumber(this.getMinutes())}:${this.computeTwoDigitNumber(this.getSeconds())}`
+    return result
   }
 }
